@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button class="language-toggle" onclick="toggleLanguage()">Toggle Language</button>
+        <h1 id="mainTitle">My Resume</h1>
+        
+        <h2 id="personalInfoHeading">Personal Information</h2>
+        <ul>
+            <li><strong id="nameLabel">Name:</strong> Yevhenii Kaliush Oleksandrovich</li>
+            <li><strong id="dobLabel">Date of Birth:</strong> 07.03.2005</li>
+            <li><strong id="addressLabel">Address:</strong> Wroclaw, Popowicka 34, 54-238</li>
+            <li><strong id="phoneLabel">Phone:</strong> +48 515 733 917</li>
+            <li><strong id="emailLabel">Email:</strong> yevheniikaliush@gmail.com</li>
+        </ul>
+
+        <h2 id="educationHeading">Education</h2>
+        <ul>
+            <li><strong id="universityLabel">University:</strong> Uniwersytet Dolnośląski DSW</li>
+            <li><strong id="majorLabel">Major:</strong> Information Technology</li>
+            <li><strong id="graduationLabel">Year Started:</strong> 2022</li>
+        </ul>
+
+        <h2 id="programmingLanguagesHeading">Programming Languages</h2>
+        <ul>
+            <li>JavaScript - ◉◉◎◎◎ </li>
+            <li>Python - ◉◉◎◎◎</li>
+            <li>HTML - ◉◉◉◎◎</li>
+            <li>CSS - ◉◉◉◎◎</li>
+            <li>SQL - ◉◉◎◎◎</li>
+            <li>Pascal - ◉◉◎◎◎</li>
+            
+        </ul>
+
+        <h2 id="languagesHeading">Language Proficiency</h2>
+        <ul>
+            <li>Ukrainian - Native</li>
+            <li>Russian - C1</li>
+            <li>English - B1/B2</li>
+            <li>Polish - B1 </li>
+        </ul>
+
+        <h2 id="projectsHeading">Projects</h2>
+        <ul>
+            <li>
+                <strong id="projectLabel1">Project:</strong> Sample Project 1<br>
+                <strong id="descriptionLabel1">Description:</strong> a simple example site   <br>
+                <strong id="githubLink1">GitHub:</strong> <a href="#">https://yevhenk18.github.io/webshop1/index.html</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+       
+        function toggleLanguage() {
+            var language = document.documentElement.lang;
+            if (language === "en") {
+                translateToPolish();
+            } else {
+                translateToEnglish();
+            }
+        }
+
+      
+        function translateToPolish() {
+            document.documentElement.lang = "pl"; 
+            document.getElementById("mainTitle").innerText = "Moje CV";
+            document.getElementById("personalInfoHeading").innerText = "Informacje Osobiste";
+            document.getElementById("nameLabel").innerText = "Imię:";
+            document.getElementById("dobLabel").innerText = "Data urodzenia:";
+            document.getElementById("addressLabel").innerText = "Adres:";
+            document.getElementById("phoneLabel").innerText = "Telefon:";
+            document.getElementById("emailLabel").innerText = "Email:";
+            document.getElementById("educationHeading").innerText = "Wykształcenie";
+            document.getElementById("universityLabel").innerText = "Uniwersytet:";
+            document.getElementById("majorLabel").innerText = "Kierunek:";
+            document.getElementById("graduationLabel").innerText = "Rok rozpoczęcia:";
+            document.getElementById("programmingLanguagesHeading").innerText = "Znajomość języków programowania";
+            document.getElementById("languagesHeading").innerText = "Znajomość języków obcych";
+            document.getElementById("projectsHeading").innerText = "Projekty";
+            document.getElementById("projectLabel1").innerText = "Projekt:";
+            document.getElementById("descriptionLabel1").innerText = "Opis:";
+            document.getElementById("githubLink1").innerText = "GitHub:";
+        }
+
+        
+        function translateToEnglish() {
+            document.documentElement.lang = "en"; 
+            document.getElementById("mainTitle").innerText = "My Resume";
+            document.getElementById("personalInfoHeading").innerText = "Personal Information";
+            document.getElementById("nameLabel").innerText = "Name:";
+            document.getElementById("dobLabel").innerText = "Date of Birth:";
+            document.getElementById("addressLabel").innerText = "Address:";
+            document.getElementById("phoneLabel").innerText = "Phone:";
+            document.getElementById("emailLabel").innerText = "Email:";
+            document.getElementById("educationHeading").innerText = "Education";
+            document.getElementById("universityLabel").innerText = "University:";
+            document.getElementById("majorLabel").innerText = "Major:";
+            document.getElementById("graduationLabel").innerText = "Year Started:";
+            document.getElementById("programmingLanguagesHeading").innerText = "Programming Languages";
+            document.getElementById("languagesHeading").innerText = "Language Proficiency";
+            document.getElementById("projectsHeading").innerText = "Projects";
+            document.getElementById("projectLabel1").innerText = "Project:";
+            document.getElementById("descriptionLabel1").innerText = "Description:";
+            document.getElementById("githubLink1").innerText = "GitHub:";
+        }
+    </script>
+</body>
+</html>
